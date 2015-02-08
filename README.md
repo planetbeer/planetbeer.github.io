@@ -1,2 +1,3 @@
-# planetbeer.github.io
-planet beer site
+
+Planet Beer Site - [`planetbeer.github.io`](http://planetbeer.github.io/)
+
