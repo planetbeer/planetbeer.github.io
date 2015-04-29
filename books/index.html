@@ -1,0 +1,62 @@
+---
+layout: default
+title:  "Beer Books 'n' Maps"
+---
+
+<!--
+<p>
+  Subscribe to the <a href="{{ site.url }}/books/feed.xml">{{ page.title}} News Feed »</a>
+</p>
+-->
+
+
+<h1>{{ page.title }}</h1>
+
+
+{% include books-welcome.html %}
+
+
+<h2>English</h2>
+
+<div class='gallery'>
+{% for book in site.data.books.en limit:6 %}
+
+  <div class='book'>
+    <div class='book-img'>
+        <!-- note: scale image to 120px -->
+        <img src="{{site.url}}/_data/books/i/en/{{book.cover}}" style="height: 220px; width: auto;">
+    </div>
+    <div class='book-title'>
+        {{ book.title }}
+        {% if book.edition %}
+          {{ book.edition}}
+        {% endif %}
+        by {{ book.author }}; {{ book.publisher }}
+    </div>
+  </div>
+
+{% endfor %}
+</div>
+
+
+<h2>Deutsch (German)</h2>
+
+<div class='gallery'>
+{% for book in site.data.books.de limit:6 %}
+
+  <div class='book'>
+    <div class='book-img'>
+        <img src="{{site.url}}/_data/books/i/de/{{book.cover}}" style="height: 220px; width: auto;">
+    </div>
+    <div class='book-title'>
+        {{ book.title }}
+        {% if book.edition %}
+          {{ book.edition}}
+        {% endif %}
+        by {{ book.author }}; {{ book.publisher }}
+    </div>
+  </div>
+
+{% endfor %}
+</div>
+

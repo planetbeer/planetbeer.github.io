@@ -21,6 +21,7 @@ sass:
 
 exclude:
 - README.md
+- _data/books/README.md
 
 
 safe: true
