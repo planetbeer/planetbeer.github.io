@@ -18,6 +18,8 @@ sass:
   style:    expanded
 
 
+include:
+- _data
 
 exclude:
 - README.md
